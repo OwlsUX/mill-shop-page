@@ -10,6 +10,23 @@
   let selectedColor = 'white';
   let currentIdx = 0;
 
+  // --- HLS.js helper for Mux videos ---
+  function playMuxVideo(videoEl, muxId) {
+    const src = `https://stream.mux.com/${muxId}.m3u8`;
+    if (videoEl.canPlayType('application/vnd.apple.mpegurl')) {
+      // Safari: native HLS support
+      videoEl.src = src;
+      videoEl.play().catch(() => {});
+    } else if (window.Hls && Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(src);
+      hls.attachMedia(videoEl);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => {
+        videoEl.play().catch(() => {});
+      });
+    }
+  }
+
   // Logo: white on lifestyle (idx 0), dark on product renders
   function updateLogoColor() {
     const logo = document.querySelector('.gallery-logo');
@@ -49,6 +66,34 @@
     });
   }
 
+  // --- Create a Mux video element for the gallery viewport ---
+  function createGalleryVideo(muxId) {
+    const video = document.createElement('video');
+    video.className = 'gallery-hero-img';
+    video.autoplay = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.muted = true;
+    playMuxVideo(video, muxId);
+    return video;
+  }
+
+  // --- Show image or video in gallery viewport ---
+  function showInViewport(viewport, thumb) {
+    const muxId = thumb.dataset.mux;
+    if (muxId) {
+      viewport.innerHTML = '';
+      viewport.appendChild(createGalleryVideo(muxId));
+    } else {
+      const img = thumb.querySelector('img');
+      if (!viewport.querySelector('#main-image')) {
+        viewport.innerHTML = '<img id="main-image" class="gallery-hero-img" src="' + (img ? img.src : '') + '" alt="Mill Food Recycler">';
+      } else {
+        if (img) document.getElementById('main-image').src = img.src;
+      }
+    }
+  }
+
   // --- Gallery thumbnails ---
   function initGallery() {
     document.querySelector('.gallery-thumbs')?.addEventListener('click', e => {
@@ -59,20 +104,7 @@
       btn.classList.add('active');
       currentIdx = parseInt(btn.dataset.idx, 10) || 0;
 
-      const viewport = document.querySelector('.gallery-viewport');
-      const muxId = btn.dataset.mux;
-      if (muxId) {
-        // Replace main image with video
-        viewport.innerHTML = '<video class="gallery-hero-img" autoplay loop playsinline muted src="https://stream.mux.com/' + muxId + '/high.mp4"></video>';
-      } else {
-        const img = btn.querySelector('img');
-        // Restore image if video was playing
-        if (!viewport.querySelector('#main-image')) {
-          viewport.innerHTML = '<img id="main-image" class="gallery-hero-img" src="' + (img ? img.src : '') + '" alt="Mill Food Recycler">';
-        } else {
-          if (img) document.getElementById('main-image').src = img.src;
-        }
-      }
+      showInViewport(document.querySelector('.gallery-viewport'), btn);
       updateLogoColor();
     });
   }
@@ -93,18 +125,7 @@
       thumbs.forEach(t => t.classList.remove('active'));
       thumbs[currentIdx].classList.add('active');
 
-      const viewport = document.querySelector('.gallery-viewport');
-      const muxId = thumbs[currentIdx].dataset.mux;
-      if (muxId) {
-        viewport.innerHTML = '<video class="gallery-hero-img" autoplay loop playsinline muted src="https://stream.mux.com/' + muxId + '/high.mp4"></video>';
-      } else {
-        const img = thumbs[currentIdx].querySelector('img');
-        if (!viewport.querySelector('#main-image')) {
-          viewport.innerHTML = '<img id="main-image" class="gallery-hero-img" src="' + (img ? img.src : '') + '" alt="Mill Food Recycler">';
-        } else {
-          if (img) document.getElementById('main-image').src = img.src;
-        }
-      }
+      showInViewport(document.querySelector('.gallery-viewport'), thumbs[currentIdx]);
       updateLogoColor();
     }
 
@@ -161,19 +182,23 @@
         const muxId = btn.dataset.mux;
         if (!muxId) return;
         const poster = btn.closest('.video-poster');
-        const iframe = document.createElement('iframe');
-        iframe.src = `https://stream.mux.com/${muxId}.m3u8?autoplay=1`;
-        // Use Mux player embed
         const video = document.createElement('video');
         video.autoplay = true;
         video.controls = true;
         video.playsInline = true;
         video.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:16px;';
-        video.src = `https://stream.mux.com/${muxId}/high.mp4`;
         video.poster = poster.querySelector('img')?.src || '';
         poster.innerHTML = '';
         poster.appendChild(video);
+        playMuxVideo(video, muxId);
       });
+    });
+  }
+
+  // --- Auto-play Mux videos (bento section etc.) ---
+  function initAutoplayVideos() {
+    document.querySelectorAll('video[data-mux-src]').forEach(video => {
+      playMuxVideo(video, video.dataset.muxSrc);
     });
   }
 
@@ -212,6 +237,7 @@
     initFaq();
     initCart();
     initVideoPlayers();
+    initAutoplayVideos();
     initFadeIn();
     initSmoothScroll();
   });
