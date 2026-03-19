@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mill Food Recycler | Configure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 01 — Trust Banner -->
+  <div class="trust-banner">
+    90-day money back | 3-year warranty | Free shipping
+  </div>
+
+  <!-- CONFIGURATOR -->
+  <section class="configurator" id="configurator">
+    <div class="configurator-grid">
+
+      <!-- LEFT: Gallery (full-height, edge-to-edge) -->
+      <div class="gallery-col">
+        <!-- Mill logo floats on gallery -->
+        <a href="#" class="gallery-logo logo-light">
+          <img src="https://a-us.storyblok.com/f/1019164/53x36/9501e3aa21/mill-new-green.svg" alt="Mill" width="53" height="36">
+        </a>
+
+        <div class="gallery-viewport">
+          <img id="main-image" class="gallery-hero-img" src="https://a-us.storyblok.com/f/1019164/4536x2550/20af39cf5b/desktop-gallery_02.jpg" alt="Mill Food Recycler">
+        </div>
+
+        <!-- Prev / Next arrows -->
+        <button class="gallery-arrow gallery-arrow-left" id="gallery-prev" aria-label="Previous">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="gallery-arrow gallery-arrow-right" id="gallery-next" aria-label="Next">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </button>
+
+        <!-- Thumbnails overlaid at bottom -->
+        <div class="gallery-thumbs">
+          <div class="thumb-set active" data-color="white">
+            <button class="thumb active" data-idx="0"><img src="https://a-us.storyblok.com/f/1019164/4536x2550/20af39cf5b/desktop-gallery_02.jpg" alt=""></button>
+            <button class="thumb" data-idx="1"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/fcbb8e9738/desktop-white-render-02.webp" alt=""></button>
+            <button class="thumb" data-idx="2"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/5651ffd75a/desktop-white-render-01.webp" alt=""></button>
+            <button class="thumb" data-idx="3"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/0419306efc/desktop-white-render-04.webp" alt=""></button>
+            <button class="thumb" data-idx="4"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/e0a4cc6b42/desktop-white-render-05.webp" alt=""></button>
+            <button class="thumb" data-idx="5"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/3e726c9c0a/desktop-white-render-03.webp" alt=""></button>
+            <button class="thumb thumb-video" data-idx="6" data-mux="baiiaOdDboBu00wUarsXs018CZ102uQTvBlKSR3OXACNc00"><img src="https://image.mux.com/baiiaOdDboBu00wUarsXs018CZ102uQTvBlKSR3OXACNc00/thumbnail.jpg?width=200&height=200&fit_mode=smartcrop" alt="Video"></button>
+          </div>
+          <div class="thumb-set" data-color="black">
+            <button class="thumb active" data-idx="0"><img src="https://a-us.storyblok.com/f/1019164/4824x2754/db92656182/galleryblack-4-desktop.webp" alt=""></button>
+            <button class="thumb" data-idx="1"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/84fa4523a4/desktop-black-render-02.webp" alt=""></button>
+            <button class="thumb" data-idx="2"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/8c9e59c389/desktop-black-render-01.webp" alt=""></button>
+            <button class="thumb" data-idx="3"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/5099ec5805/desktop-black-render-04.webp" alt=""></button>
+            <button class="thumb" data-idx="4"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/eb1795d4b5/desktop-black-render-05.webp" alt=""></button>
+            <button class="thumb" data-idx="5"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/012412230c/desktop-black-render-03.webp" alt=""></button>
+            <button class="thumb thumb-video" data-idx="6" data-mux="baiiaOdDboBu00wUarsXs018CZ102uQTvBlKSR3OXACNc00"><img src="https://image.mux.com/baiiaOdDboBu00wUarsXs018CZ102uQTvBlKSR3OXACNc00/thumbnail.jpg?width=200&height=200&fit_mode=smartcrop" alt="Video"></button>
+          </div>
+          <div class="thumb-set" data-color="stainless">
+            <button class="thumb active" data-idx="0"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/f401b6feca/desktop-steel-render00.webp" alt=""></button>
+            <button class="thumb" data-idx="1"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/0386d3d3a5/desktop-steel-render02.webp" alt=""></button>
+            <button class="thumb" data-idx="2"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/f352a7550c/desktop-steel-render01.webp" alt=""></button>
+            <button class="thumb" data-idx="3"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/412cd36cbd/desktop-steel-render04-1.webp" alt=""></button>
+            <button class="thumb" data-idx="4"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/1c86bcaa06/desktop-steel-render05.webp" alt=""></button>
+            <button class="thumb" data-idx="5"><img src="https://a-us.storyblok.com/f/1019164/3096x2400/97a3dc1a5c/desktop-steel-render03.webp" alt=""></button>
+            <button class="thumb thumb-video" data-idx="6" data-mux="baiiaOdDboBu00wUarsXs018CZ102uQTvBlKSR3OXACNc00"><img src="https://image.mux.com/baiiaOdDboBu00wUarsXs018CZ102uQTvBlKSR3OXACNc00/thumbnail.jpg?width=200&height=200&fit_mode=smartcrop" alt="Video"></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Config Panel -->
+      <div class="config-col" id="config-panel">
+
+        <!-- Rating -->
+        <div class="rating-row">
+          <span class="rating-num">4.80 / 5</span>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <a href="#reviews" class="rating-link">3,050 reviews</a>
+        </div>
+
+        <!-- Title -->
+        <h1 class="product-title">Mill Food Recycler</h1>
+
+        <!-- Color Selector -->
+        <div class="color-select">
+          <div class="color-label">Color - <span id="color-name">White</span></div>
+          <div class="swatches">
+            <button class="swatch active" data-color="white" title="White"><img src="https://a-us.storyblok.com/f/1019164/37x36/f4bd6979e8/white-swatch.svg" alt="White"></button>
+            <button class="swatch" data-color="black" title="Black"><img src="https://a-us.storyblok.com/f/1019164/36x36/5c2958435c/black_swatch.svg" alt="Black"></button>
+            <button class="swatch" data-color="stainless" title="Stainless Steel"><img src="https://a-us.storyblok.com/f/1019164/37x36/6415056b14/silver_swatch.svg" alt="Stainless Steel"></button>
+          </div>
+          <p class="ships-text">Ships in 1 - 3 business days</p>
+        </div>
+
+        <!-- Benefits (2-col, no bg) -->
+        <div class="benefits">
+          <div class="benefit"><img src="https://a-us.storyblok.com/f/1019164/24x24/6b8760673b/smell.svg" alt="" width="20" height="20"><span>Zero kitchen smells</span></div>
+          <div class="benefit"><img src="https://a-us.storyblok.com/f/1019164/24x24/329d9be8e3/automated.svg" alt="" width="20" height="20"><span>Runs automatically</span></div>
+          <div class="benefit"><img src="https://a-us.storyblok.com/f/1019164/24x24/71fff47b7b/reduce-waste.svg" alt="" width="20" height="20"><span>Reduces waste</span></div>
+          <div class="benefit"><img src="https://a-us.storyblok.com/f/1019164/24x24/cfcfa273fc/once-a-month.svg" alt="" width="20" height="20"><span>Empty once a month</span></div>
+          <div class="benefit"><img src="https://a-us.storyblok.com/f/1019164/24x24/302c706234/gardeners.svg" alt="" width="20" height="20"><span>Great for gardens</span></div>
+          <div class="benefit"><img src="https://a-us.storyblok.com/f/1019164/24x24/1da18975dc/quiet.svg" alt="" width="20" height="20"><span>Whisper quiet</span></div>
+        </div>
+
+        <!-- Price -->
+        <div class="price-row">
+          <span class="price">$949</span>
+          <a href="#" class="rent-link">Or rent for $35/mo</a>
+        </div>
+
+        <!-- Add to Cart -->
+        <button class="cta-btn" id="add-to-cart">Add to Cart</button>
+        <p class="affirm-note">Financing from $79.08/month with <strong>Affirm</strong>.</p>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <img src="https://a-us.storyblok.com/f/1019164/24x24/14db2cb384/calendar-check-01.svg" alt="" width="28" height="28">
+            <span>90-day money<br>back guarantee</span>
+          </div>
+          <div class="trust-badge">
+            <img src="https://a-us.storyblok.com/f/1019164/24x24/9e379f0a3e/shield-tick.svg" alt="" width="28" height="28">
+            <span>3 year warranty included</span>
+          </div>
+          <div class="trust-badge">
+            <img src="https://a-us.storyblok.com/f/1019164/24x24/c3b246b18b/truck-01.svg" alt="" width="28" height="28">
+            <span>Free shipping &amp; returns</span>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="faq-section">
+          <h3 class="faq-title">Frequently asked questions</h3>
+          <div class="faq-item">
+            <button class="faq-q">
+              <span class="faq-q-left"><img src="https://a-us.storyblok.com/f/1019164/24x24/6c714f22bf/foodrecycler.svg" alt="" width="20" height="20"><span>What's included?</span></span>
+              <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-a"><p>The Mill food recycler, a professional-grade aluminum bucket, a carbon filter with a built-in dual mesh pre-filter that captures fine airborne particles — like dust and pollen — that lasts a year, a detachable power cable, and a Food Library sticker.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              <span class="faq-q-left"><img src="https://a-us.storyblok.com/f/1019164/24x24/44b6590055/money_back.svg" alt="" width="20" height="20"><span>Will it fit in my kitchen?</span></span>
+              <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-a"><p>Mill is about the size of a kitchen trash can, and sits on the floor to save counter space. It is built to last for years of daily use, and covered by a 3-year warranty (or you can choose to add a 5-year warranty).</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q">
+              <span class="faq-q-left"><img src="https://a-us.storyblok.com/f/1019164/24x24/9e379f0a3e/shield-tick.svg" alt="" width="20" height="20"><span>What is the return policy?</span></span>
+              <svg class="faq-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-a"><p>We really think you're going to love it. If you don't, you can return it for free within 90 days.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cart Panel (hidden until Add to Cart) -->
+      <div class="cart-panel hidden" id="cart-panel">
+        <div class="cart-header"><h2>Your cart</h2></div>
+        <div class="cart-line">
+          <div class="cart-img"><img id="cart-thumb" src="https://a-us.storyblok.com/f/1019164/3096x2400/fcbb8e9738/desktop-white-render-02.webp" alt="Mill"></div>
+          <div class="cart-info"><h3>Mill Food Recycler</h3><p id="cart-color">White</p><p>Qty: 1</p></div>
+          <div class="cart-price" id="cart-price">$949</div>
+        </div>
+        <div class="cart-upsell">
+          <div><p class="upsell-title">Protect your Mill for 5 years</p><p class="upsell-sub">Extended Coverage</p></div>
+          <button class="upsell-btn">Add for $199</button>
+        </div>
+        <div class="cart-totals">
+          <div class="cart-row"><span>Subtotal</span><span id="cart-sub">$949</span></div>
+          <div class="cart-row"><span>Shipping</span><span class="free-ship">Free</span></div>
+          <div class="cart-row cart-row-total"><span>Estimated total</span><span id="cart-total">$949</span></div>
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BELOW FOLD -->
+
+  <!-- 10 — Press Logos -->
+  <section class="press-logos">
+    <p class="press-label">As Seen In</p>
+    <div class="press-strip">
+      <img src="https://a-us.storyblok.com/f/1019164/183x24/4ababa97f6/food-and-wine-logo.svg" alt="Food & Wine" height="24">
+      <img src="https://a-us.storyblok.com/f/1019164/110x72/368a615c04/architectural-digest-logo.svg" alt="Architectural Digest" height="28">
+      <img src="https://a-us.storyblok.com/f/1019164/53x16/62a60b1f8b/time_logo_black.svg" alt="TIME" height="16">
+      <img src="https://a-us.storyblok.com/f/1019164/182x24/fb6d8821d7/fastcompanyblack.svg" alt="Fast Company" height="24">
+      <img src="https://a-us.storyblok.com/f/1019164/1280x109/d69b7b123f/wsj_logo-svg.png" alt="WSJ" height="20">
+    </div>
+  </section>
+
+  <!-- 11 — Video Reviews -->
+  <section class="video-reviews">
+    <div class="video-reviews-wrap">
+      <h2 class="video-reviews-heading">Real people are obsessed with Mill</h2>
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-poster">
+            <img src="https://a-us.storyblok.com/f/1019164/1134x1701/ef084d77ab/desktop_alexjesseanddevon.png" alt="Jesse, Devon & Alex">
+            <button class="play-btn" data-mux="GISx3pUqx70073wAulEoA76IASgKHo02Fm6CXCCrjOt6w" aria-label="Play video">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.9)"/><polygon points="20,16 34,24 20,32" fill="#1D1C1D"/></svg>
+            </button>
+          </div>
+          <p class="video-quote">"It feels like we are part of the solution"</p>
+          <p class="video-author">Jesse, Devon &amp; Alex</p>
+        </div>
+        <div class="video-card">
+          <div class="video-poster">
+            <img src="https://a-us.storyblok.com/f/1019164/1134x1701/c97adcbfd6/desktop_jakeandolivia.png" alt="Olivia & Jake">
+            <button class="play-btn" data-mux="pxYmJX800fwNEpWHQLi0202mthDfxH702L4PX01xeZmsb00RE" aria-label="Play video">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.9)"/><polygon points="20,16 34,24 20,32" fill="#1D1C1D"/></svg>
+            </button>
+          </div>
+          <p class="video-quote">"It really feels like an integrated part of our life"</p>
+          <p class="video-author">Olivia &amp; Jake</p>
+        </div>
+        <div class="video-card">
+          <div class="video-poster">
+            <img src="https://a-us.storyblok.com/f/1019164/1134x1701/cf020a1a01/desktop_shreyaandakshai.png" alt="Shreya & Akshai">
+            <button class="play-btn" data-mux="D003y02X8udFsrGaRNuiDSbrIJN2AHRIHDfNwD4BKmVnw" aria-label="Play video">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.9)"/><polygon points="20,16 34,24 20,32" fill="#1D1C1D"/></svg>
+            </button>
+          </div>
+          <p class="video-quote">"You build a strong relationship with food when you have Mill"</p>
+          <p class="video-author">Shreya &amp; Akshai</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 — Comparison -->
+  <section class="compare-section">
+    <div class="compare-wrap">
+      <h2>Mill vs. the Rest</h2>
+      <div class="compare-table">
+        <div class="compare-header">
+          <div class="compare-feature"></div>
+          <div class="compare-mill-col">
+            <img src="https://a-us.storyblok.com/f/1019164/53x36/9501e3aa21/mill-new-green.svg" alt="mill" class="compare-mill-logo">
+          </div>
+          <div class="compare-rest-col">The Rest</div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Takes 3-4 weeks to fill</div>
+          <div class="compare-mill-col"><span class="chk-circle">&#10003;</span></div>
+          <div class="compare-rest-col"><span class="dash">—</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Shrinks food by 80%</div>
+          <div class="compare-mill-col"><span class="chk-circle">&#10003;</span></div>
+          <div class="compare-rest-col"><span class="chk-gray">&#10003;</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Carbon filter lasts 12 months</div>
+          <div class="compare-mill-col"><span class="chk-circle">&#10003;</span></div>
+          <div class="compare-rest-col"><span class="dash">—</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Runs automatically</div>
+          <div class="compare-mill-col"><span class="chk-circle">&#10003;</span></div>
+          <div class="compare-rest-col"><span class="dash">—</span></div>
+        </div>
+        <div class="compare-row">
+          <div class="compare-feature">Tracks your impact</div>
+          <div class="compare-mill-col"><span class="chk-circle">&#10003;</span></div>
+          <div class="compare-rest-col"><span class="chk-gray">&#10003;</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 — Reviews (Yotpo-style) -->
+  <section class="reviews-section" id="reviews">
+    <div class="reviews-wrap">
+      <div class="reviews-left">
+        <p class="reviews-trusted">TRUSTED REVIEWS BY <strong>yotpo.</strong></p>
+        <h2 class="reviews-heading">Customer Reviews</h2>
+        <div class="reviews-score">4.80/5</div>
+      </div>
+      <div class="reviews-right">
+        <div class="reviews-bar">
+          <span class="reviews-count">Based on 3050 reviews</span>
+          <span class="reviews-sort">Sort by <strong>Newest to oldest</strong> &#9662;</span>
+        </div>
+        <div class="reviews-feed">
+          <div class="review">
+            <div class="review-top"><div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><span class="r-date">1 day ago</span></div>
+            <p class="r-body">The mill works great. I can see the amount of trash decreased with the use of the mill.</p>
+            <div class="r-author-row"><div class="r-avatar" style="background:#e8d5c4;">J</div><div><span class="r-name">Jan B.</span><span class="r-verified">Verified buyer</span></div></div>
+          </div>
+          <div class="review">
+            <div class="review-top"><div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><span class="r-date">1 day ago</span></div>
+            <p class="r-body">Hi, unfortunately we have not used the mill and would like to return it-only because we don't have a spot in our kitchen with electrical. It is still in the original box.</p>
+            <div class="r-author-row"><div class="r-avatar" style="background:#c4d4e8;">K</div><div><span class="r-name">Kelly F.</span><span class="r-verified">Verified buyer</span></div></div>
+          </div>
+          <div class="review">
+            <div class="review-top"><div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><span class="r-date">1 day ago</span></div>
+            <p class="r-body">I love this and it has definitely has changed how often we have to take out the trash</p>
+            <div class="r-author-row"><div class="r-avatar" style="background:#d4e8c4;">M</div><div><span class="r-name">Michelle M.</span><span class="r-verified">Verified buyer</span></div></div>
+          </div>
+          <div class="review">
+            <div class="review-top"><div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><span class="r-date">3 days ago</span></div>
+            <p class="r-body">Great device - no smell, and quickly turns food waste into grounds I can add to my garden!</p>
+            <div class="r-author-row"><div class="r-avatar" style="background:#e8e0c4;">L</div><div><span class="r-name">Lindsey N.</span><span class="r-verified">Verified buyer</span></div></div>
+          </div>
+          <div class="review">
+            <div class="review-top"><div class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><span class="r-date">5 days ago</span></div>
+            <p class="r-body">Love it</p>
+            <div class="r-author-row"><div class="r-avatar" style="background:#c4cde8;">R</div><div><span class="r-name">Richard H.</span><span class="r-verified">Verified buyer</span></div></div>
+          </div>
+        </div>
+        <button class="show-more-btn">Show more</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14 — Closing CTA (full-screen hero) -->
+  <section class="closing-cta">
+    <img src="https://a-us.storyblok.com/f/1019164/3024x1703/5fc2a43dfa/filler-pdp-desktop.webp/m/" alt="" class="closing-bg">
+    <div class="closing-overlay">
+      <h2>Mill Food Recycler</h2>
+      <p class="closing-sub">Buy, finance, or rent. Free shipping. 90-day returns.</p>
+      <a href="#configurator" class="closing-btn">Add to Cart</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top"><div class="f-logo"><img src="https://a-us.storyblok.com/f/1019164/53x36/9501e3aa21/mill-new-green.svg" alt="Mill" width="53" height="36"></div>
+        <nav class="f-links"><a href="#">About</a><a href="#">Careers</a><a href="#">Press</a><a href="#">Blog</a><a href="#">Support</a><a href="#">Contact</a></nav>
+      </div>
+      <div class="footer-bot"><p>&copy; 2024 Mill Industries, Inc.</p><div class="f-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
