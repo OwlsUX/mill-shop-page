@@ -51,7 +51,7 @@ button { font-family: inherit; cursor: pointer; }
 .configurator-grid {
   display: grid;
   grid-template-columns: 65fr 35fr;
-  min-height: 100vh;
+  min-height: calc(100vh - 37px);
 }
 
 /* ============================================
@@ -59,9 +59,9 @@ button { font-family: inherit; cursor: pointer; }
    ============================================ */
 .gallery-col {
   position: sticky;
-  top: 0;
+  top: 37px;
   align-self: start;
-  height: 100vh;
+  height: calc(100vh - 37px);
   overflow: hidden;
 }
 
@@ -185,7 +185,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 40px 40px 60px;
   overflow-y: auto;
   scrollbar-gutter: stable;
-  max-height: 100vh;
+  max-height: calc(100vh - 37px);
 }
 
 /* ============================================
@@ -360,9 +360,11 @@ button { font-family: inherit; cursor: pointer; }
 }
 .faq-item {
   background: #F6F5F1;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 8px;
   overflow: hidden;
+  outline: 1px solid #E0DFDB;
+  transition: outline-color 0.15s;
 }
 .faq-q {
   display: flex;
@@ -382,10 +384,10 @@ button { font-family: inherit; cursor: pointer; }
   align-items: center;
   gap: 12px;
 }
-.faq-q-left img { width: 20px; height: 20px; opacity: 0.6; }
+.faq-q-left img { width: 24px; height: 24px; opacity: 0.7; }
 .faq-chev {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   flex-shrink: 0;
   transition: transform 0.25s;
   color: #888;
