@@ -177,6 +177,21 @@
     });
   }
 
+  // --- Scroll fade-in animations ---
+  function initFadeIn() {
+    const targets = document.querySelectorAll('.fade-in');
+    if (!targets.length) return;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    targets.forEach(el => observer.observe(el));
+  }
+
   // --- Smooth anchor scroll ---
   function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -197,6 +212,7 @@
     initFaq();
     initCart();
     initVideoPlayers();
+    initFadeIn();
     initSmoothScroll();
   });
 })();
