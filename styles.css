@@ -79,7 +79,7 @@ button { font-family: inherit; cursor: pointer; }
 }
 /* White logo for dark/lifestyle images */
 .gallery-logo.logo-light img {
-  filter: brightness(10);
+  filter: brightness(0) invert(1);
 }
 
 /* Hero image viewport */
@@ -280,7 +280,7 @@ button { font-family: inherit; cursor: pointer; }
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  border: 2px solid transparent;
+  border: 2px solid #D9D9D9;
   padding: 4px;
   background: none;
   transition: border-color 0.15s;
